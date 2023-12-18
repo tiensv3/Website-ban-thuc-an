@@ -70,7 +70,7 @@ session_start();
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0 mb-5">
-        <a href="index.html" class="navbar-brand ms-lg-5">
+        <a href="index.php" class="navbar-brand ms-lg-5">
             <h1 class="m-0 text-uppercase text-dark">
                 <i class="bi bi-shop fs-1 text-primary me-3"></i>PET FOOD SHOP
             </h1>
@@ -81,7 +81,15 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a href="index.php" class="nav-item nav-link">Trang Chủ</a>
-                <a href="sanpham.php" class="nav-item nav-link">Sản phẩm</a>
+
+                <a href="sanpham.php" class="nav-item nav-link">Sản phẩm</a>&nbsp&nbsp&nbsp&nbsp
+
+                <form id="searchForm" class="d-flex nav-item" action="sanphamtimkiem.php" method="POST">
+                    <input id="searchInput" class="form-control form-control-sm me-2 small" type="text"
+                        placeholder="Tìm kiếm..." aria-label="Search" name="search">
+                    <button class="btn btn-outline-primary btn-sm small" type="button">Tìm kiếm</button>
+                </form>
+
                 <?php
                 
                 if (isset($_SESSION['khachhang'])) {
